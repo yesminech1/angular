@@ -1,0 +1,13 @@
+<section class="card" id="amis">
+  <div class="icon">👥</div>
+  <div>
+    <h2>Liste des amis</h2>
+    <ul>
+      @for (ami of amis(); track ami) {
+        <li>{{ ami }}</li>
+      } @empty {
+        <li>Aucun ami pour le moment</li>
+      }
+    </ul>
+  </div>
+</section>

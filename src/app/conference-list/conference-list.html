@@ -1,0 +1,33 @@
+<section class="card" id="conference-list">
+  <div class="head">
+    <div class="icon">📅</div>
+    <div>
+      <h2>Liste des conférences à venir</h2>
+      <p class="sub">Cliquez sur une conférence pour afficher ses détails.</p>
+    </div>
+  </div>
+
+  <input type="text" placeholder="Taper le titre de la conférence" [(ngModel)]="search" />
+
+  <div class="grid">
+    @for (c of filtered(); track c.id) {
+      <article class="conf">
+        <h3>{{ c.title | uppercase }}</h3>
+        <p><strong>Date :</strong> {{ c.date | date: 'dd/MM/yyyy' }}</p>
+        <p><strong>Lieu :</strong> {{ c.place }}</p>
+        <p><strong>Places restantes :</strong> {{ remaining(c) }}</p>
+        <button
+          [class.green]="remaining(c) >= 10"
+          [class.orange]="remaining(c) > 0 && remaining(c) < 10"
+          [class.red]="remaining(c) === 0"
+          [disabled]="remaining(c) === 0"
+          (click)="register(c.id)"
+        >
+          S'inscrire
+        </button>
+      </article>
+    } @empty {
+      <p class="empty">Aucune conférence enregistrée.</p>
+    }
+  </div>
+</section>

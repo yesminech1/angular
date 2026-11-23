@@ -1,0 +1,38 @@
+.card {
+  background: white;
+  border-left: 5px solid #0f766e;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+.head { display: flex; gap: 20px; align-items: center; margin-bottom: 18px; }
+.icon {
+  width: 58px; height: 58px; flex: 0 0 58px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: #e0fbf8;
+  font-size: 28px;
+}
+h2 { margin: 0; color: #173b67; }
+.sub { margin: 4px 0 0; color: #6b7280; }
+input {
+  width: 100%; max-width: 540px;
+  padding: 14px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 15px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.conf { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 24px; }
+.conf h3 { margin-top: 0; color: #173b67; }
+button {
+  color: white; border: 0; border-radius: 10px;
+  padding: 12px 18px; font-weight: bold; cursor: pointer;
+}
+button:disabled { cursor: not-allowed; opacity: 0.9; }
+.green { background: #15803d; }
+.orange { background: #d97706; }
+.red { background: #c62828; }
+.empty { color: #6b7280; font-style: italic; }

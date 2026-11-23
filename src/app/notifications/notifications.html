@@ -1,0 +1,10 @@
+<section class="card" id="notifications">
+  <div class="icon">🔔</div>
+  <div>
+    <h2>Zone de notifications</h2>
+    <p>Vous avez {{ notifications().length }} nouvelles notifications.</p>
+    @for (n of notifications(); track n) {
+      <p class="notification">{{ n }}</p>
+    }
+  </div>
+</section>
